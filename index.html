@@ -12,6 +12,9 @@
   <!-- mount Vue component -->
   <div id="app">
     <p>{{title}} - {{author}} - {{age}}</p>
+
+    <button @click="age++">Increase</button>
+    <button @click="age--">Decrease</button>
   </div>
 
   <script src="app.js"></script>

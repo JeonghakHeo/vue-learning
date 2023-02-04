@@ -15,10 +15,14 @@
       <p>{{title}} - {{author}} - {{age}}</p>
     </div>
 
+    <!-- takes out from DOM -->
     <button @click="toggleShowBooks">
       <span v-if="showBooks">Hide Books</span>
       <span v-else>Show Books</span>
     </button>
+
+    <!-- applies display:none -->
+    <div v-show="showBooks">currently showing books</div>
   </div>
 
   <script src="app.js"></script>

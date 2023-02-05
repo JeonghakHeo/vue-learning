@@ -4,9 +4,9 @@ const app = Vue.createApp({
 			url: 'https://www.thenetninja.co.uk',
 			showBooks: true,
 			books: [
-				{ title: 'name of the wind', author: 'patrik rothfuss'},
-				{ title: 'the way of kings', author: 'brandon sanderson'},
-				{ title: 'the final empire', author: 'patric rothfuss'}
+				{ title: 'name of the wind', author: 'patrik rothfuss', isFav: true},
+				{ title: 'the way of kings', author: 'brandon sanderson', isFav: false},
+				{ title: 'the final empire', author: 'patric rothfuss', isFav: true}
 			]
 		}
 	},
@@ -14,6 +14,9 @@ const app = Vue.createApp({
 		toggleShowBooks() {
 			this.showBooks = !this.showBooks
 		},
+		toggleFav(book) {
+			book.isFav = !book.isFav
+		}
 	}
 })
 
